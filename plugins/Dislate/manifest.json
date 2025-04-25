@@ -1,6 +1,6 @@
 {
     "name": "Dislate Lite",
-    "description": "Translates text into a desired language.",
+    "description": "Translates text into a desired language. (Updated to work with older Discord versions and use GT.",
     "authors": [
         {
             "name": "Acquite <3",
@@ -9,6 +9,10 @@
         {
             "name": "sapphire :>",
             "id": "757982547861962752"
+        },
+        {
+            "name": "Sky.Bit",
+            "id": "1154179709341552701"
         }
     ],
     "main": "src/index.ts",
