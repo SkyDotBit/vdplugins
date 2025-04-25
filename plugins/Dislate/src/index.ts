@@ -4,11 +4,13 @@ import patchCommands from "./patches/Commands"
 import Settings from "./settings"
 
 export const settings: {
-    source_lang?: string
+    source_lang?: string // ???
     target_lang?: string
+    translator?: number
 } = storage
 
-settings.target_lang ??= "EN"
+settings.target_lang ??= "en"
+settings.translator ??= 1
 
 let patches = []
 

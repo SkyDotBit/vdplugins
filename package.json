@@ -5,7 +5,9 @@
 		"deploy": "node build.mjs deploy"
 	},
 	"dependencies": {
-		"@swc/helpers": "^0.5.3"
+		"@swc/helpers": "^0.5.3",
+		"types": "^0.1.1",
+		"vendetta": "^1.0.0"
 	},
 	"devDependencies": {
 		"@rollup/plugin-commonjs": "^25.0.7",

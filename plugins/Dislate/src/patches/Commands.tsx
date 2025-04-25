@@ -8,7 +8,7 @@ import { showConfirmationAlert } from "@vendetta/ui/alerts"
 import { findByProps } from "@vendetta/metro"
 
 import lang from "../lang"
-import { DeepL } from "../api"
+import { GTranslate } from "../api"
 
 const ClydeUtils = findByProps("sendBotMessage")
 const langOptions = Object.entries(lang).map(([key, value]) => ({
@@ -20,8 +20,8 @@ const langOptions = Object.entries(lang).map(([key, value]) => ({
 export default () => registerCommand({
     name: "translate",
     displayName: "translate",
-    description: "Send a message using Dislate in any language chosen, using the DeepL Translate API.",
-    displayDescription: "Send a message using Dislate in any language chosen, using the DeepL Translate API.",
+    description: "Send a message using Dislate in any language chosen, using the GTranslate Translate API.",
+    displayDescription: "Send a message using Dislate in any language chosen, using the GTranslate Translate API.",
     applicationId: "-1",
     type: ApplicationCommandType.CHAT as number,
     inputType: ApplicationCommandInputType.BUILT_IN_TEXT as number,
@@ -48,7 +48,7 @@ export default () => registerCommand({
     async execute(args, ctx) {
         const [text, lang] = args
         try {
-            const content = await DeepL.translate(text.value, null, lang.value)
+            const content = await GTranslate.translate(text.value, null, lang.value)
             return await new Promise((resolve): void => showConfirmationAlert({
                 title: "Are you sure you want to send it?",
                 content: (
